@@ -1,0 +1,53 @@
+* {
+  background-color: black;
+}
+
+input {
+  width: 30rem;
+  color: white;
+}
+
+textarea {
+  width: 30rem;
+  height: 150px;
+  color: white;
+}
+
+button {
+  width: 100px;
+  color: black;
+  background-color: rgb(104, 97, 97);
+}
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+.images {
+  max-width: 400px;
+}
+
+.content {
+  margin: 50px;
+  color: white;
+}
+
+
+#tableMovies {
+  margin: 50px;
+  width: 100%;
+}
+
+#mainForm {
+  display: flex;
+  justify-content: space-around;
+}
+
+#addMovie {
+  display: flex;
+  flex-direction: column;
+}
+
+#placeholderImg {
+  width: 40%;
+}
