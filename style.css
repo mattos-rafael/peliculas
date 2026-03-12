@@ -32,6 +32,10 @@ table, th, td {
   color: white;
 }
 
+#searchMovie {
+  display: flex;
+  justify-content: center;
+}
 
 #tableMovies {
   margin: 50px;

@@ -50,6 +50,20 @@ form.addEventListener('submit', (event) => {
   buildTable(movies)
 })
 
+const filter = document.getElementById("search")
+
+
+filter.onchange = function(movies) {
+  let filteredMovies = [];
+  for (const movie of movies) {
+    const title = movie.title.toLowerCase();
+     if (title.includes(filter.value.toLowerCase())) {
+      filteredMovies.push(movie);
+    } 
+  } 
+  buildTable(filteredMovies)
+}
+
 
 
 function buildTable(_movies) {
