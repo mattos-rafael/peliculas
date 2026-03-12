@@ -1,5 +1,81 @@
 const form = document.getElementById("addMovie")
-let movies = []
+let genres = ['all', 'terror', 'acción', 'comedia', 'romantica']
+let movies = [
+{
+  title: 'The Shining',
+  year: '1980',
+  description: 'A family isolated in a hotel descends into madness',
+  image: 'https://via.placeholder.com/150?text=TheShining',
+  genre: 'terror'
+  },
+  {
+  title: 'Mad Max Fury Road',
+  year: '2015',
+  description: 'A post apocalyptic chase across the wasteland',
+  image: 'https://via.placeholder.com/150?text=MadMax',
+  genre: 'acción'
+  },
+  {
+  title: 'Eternal Sunshine of the Spotless Mind',
+  year: '2004',
+  description: 'A couple erases each other from their memories',
+  image: 'https://via.placeholder.com/150?text=EternalSunshine',
+  genre: 'romantica'
+  },
+  {
+  title: 'The Grand Budapest Hotel',
+  year: '2014',
+  description: 'A concierge and lobby boy at a famous hotel',
+  image: 'https://via.placeholder.com/150?text=GrandBudapest',
+  genre: 'comedia'
+  },
+  {
+  title: 'Hereditary',
+  year: '2018',
+  description: 'A family uncovers dark secrets after a death',
+  image: 'https://via.placeholder.com/150?text=Hereditary',
+  genre: 'terror'
+  },
+  {
+  title: 'John Wick',
+  year: '2014',
+  description: 'A retired assassin seeks revenge',
+  image: 'https://via.placeholder.com/150?text=JohnWick',
+  genre: 'acción'
+  },
+  {
+  title: 'The Notebook',
+  year: '2004',
+  description: 'A love story told across decades',
+  image: 'https://via.placeholder.com/150?text=TheNotebook',
+  genre: 'romantica'
+  },
+  {
+  title: 'Superbad',
+  year: '2007',
+  description: 'Two friends navigate high school and parties',
+  image: 'https://via.placeholder.com/150?text=Superbad',
+  genre: 'comedia'
+  },
+  {
+  title: 'The Ring',
+  year: '2002',
+  description: 'A cursed videotape brings supernatural horror',
+  image: 'https://via.placeholder.com/150?text=TheRing',
+  genre: 'terror'
+  },
+  {
+  title: 'Mission Impossible',
+  year: '1996',
+  description: 'A secret agent on an impossible mission',
+  image: 'https://via.placeholder.com/150?text=MissionImpossible',
+  genre: 'acción'
+  }
+
+
+]
+
+
 
 form.addEventListener('submit', (event) => {
 
@@ -48,12 +124,13 @@ form.addEventListener('submit', (event) => {
 
   movies.push(movie)
   buildTable(movies)
+  form.reset()
 })
 
 const filter = document.getElementById("search")
 
 
-filter.onchange = function(movies) {
+filter.onchange = function() {
   let filteredMovies = [];
   for (const movie of movies) {
     const title = movie.title.toLowerCase();
@@ -61,6 +138,27 @@ filter.onchange = function(movies) {
       filteredMovies.push(movie);
     } 
   } 
+  
+  buildTable(filteredMovies)
+}
+
+const formGenre = document.getElementById('genre')
+const filterGenre = document.getElementById('filterGenre')
+genres.forEach((genre) => {
+  filterGenre.innerHTML += `<option value="${genre}">${genre}</option>`
+  if (genre !== 'all') {
+    formGenre.innerHTML += `<option value="${genre}">${genre}</option>`
+  }
+  
+})
+
+filterGenre.onchange = (event) => {
+  console.log(movies);
+  
+  let filteredMovies = movies.filter(movie => {
+    return (event.target.value == 'all' || movie.genre == event.target.value)
+  })
+  
   buildTable(filteredMovies)
 }
 
@@ -88,3 +186,5 @@ function buildTable(_movies) {
   }
 
 }
+
+buildTable(movies);

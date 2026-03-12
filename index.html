@@ -26,7 +26,7 @@
             <input type="text" name="image" id="image">
             <br>
             <label for="genre">Genre</label>
-            <input type="text" name="genre" id="genre">
+            <select name="genre" id="genre"></select>
             <br>
             <button type="submit">Submit</button>
           </form>
@@ -39,8 +39,14 @@
       <div id="searchMovie">
         <label for="search">Search</label>
         <input type="text" name="search" id="search">
-        <button type="submit">Submit</button>
+        <button id="searchButton">Search</button>
+        
       </div>
+      <div" id="filter">
+        <select name="filterGenre" id="filterGenre">
+        </select>
+      </div>
+      
       <table id="tableMovies">
       </table>
     </section>

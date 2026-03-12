@@ -23,6 +23,11 @@ table, th, td {
   border-collapse: collapse;
 }
 
+select {
+  color: white;
+  margin: 1rem;
+}
+
 .images {
   max-width: 400px;
 }
@@ -32,6 +37,7 @@ table, th, td {
   color: white;
 }
 
+
 #searchMovie {
   display: flex;
   justify-content: center;
@@ -39,7 +45,7 @@ table, th, td {
 
 #tableMovies {
   margin: 50px;
-  width: 100%;
+  width: 90%;
 }
 
 #mainForm {
@@ -54,4 +60,11 @@ table, th, td {
 
 #placeholderImg {
   width: 40%;
+}
+
+#filter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
 }
