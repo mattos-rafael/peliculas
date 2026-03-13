@@ -53,6 +53,11 @@ select {
   justify-content: space-around;
 }
 
+#editMovie {
+  display: flex;
+  flex-direction: column;
+}
+
 #addMovie {
   display: flex;
   flex-direction: column;

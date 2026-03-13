@@ -153,8 +153,6 @@ genres.forEach((genre) => {
 })
 
 filterGenre.onchange = (event) => {
-  console.log(movies);
-  
   let filteredMovies = movies.filter(movie => {
     return (event.target.value == 'all' || movie.genre == event.target.value)
   })
@@ -181,10 +179,88 @@ function buildTable(_movies) {
           <td>${movie.description}</td>
           <td><img class="images" src="${movie.image}" alt=""></td>
           <td>${movie.genre}</td>
+          <td id="${movie.title}"><button class="edit">Edit</button><button class="delete">Delete</button></td>
         </tr>`
     
   }
 
+  const editButton = document.querySelectorAll(".edit")
+  for (const button of editButton) {
+    button.addEventListener('click', () => {
+      
+      const movie = movies.find((movie) => movie.title === button.closest('td').id)
+      
+      document.getElementById('editForm').innerHTML = `<div>
+            <h1>Edit movie</h1>
+            <form id="editMovie">
+              <label for="nameEdit">Name</label>
+              <input type="text" name="nameEdit" id="nameEdit">
+              <br>
+              <label for="yearEdit">Year</label>
+              <input type="text" name="yearEdit" id="yearEdit">
+              <br>
+              <label for="descriptionEdit">Description</label>
+              <textarea name="descriptionEdit" id="descriptionEdit"></textarea>
+              <br>
+              <label for="imageEdit">Image URL</label>
+              <input type="text" name="imageEdit" id="imageEdit">
+              <br>
+              <label for="genreEdit">Genre</label>
+              <select name="genreEdit" id="genreEdit"></select>
+              <br>
+              <button type="submit">Submit</button>
+            </form>
+          </div>`
+
+      const editFormGenre = document.getElementById('genreEdit')
+      genres.forEach((genre) => {
+        if (genre !== 'all') {
+          editFormGenre.innerHTML += `<option value="${genre}">${genre}</option>`
+        }
+      })
+
+      document.getElementById('nameEdit').value = movie.title
+      document.getElementById('yearEdit').value = movie.year
+      document.getElementById('descriptionEdit').value = movie.description
+      document.getElementById('imageEdit').value = movie.image
+      document.getElementById('genreEdit').value = movie.genre
+
+      const editForm = document.getElementById("editMovie")
+      editForm.addEventListener('submit', (event) => {
+        event.preventDefault()
+        const name = event.target.nameEdit.value
+        const year = event.target.yearEdit.value
+        const description = event.target.descriptionEdit.value
+        const image = event.target.imageEdit.value
+        const genre = event.target.genreEdit.value
+        
+        movie.title = name;
+        movie.year = year;
+        movie.description = description
+        movie.image = image
+        movie.genre = genre
+
+        buildTable(movies);
+        document.getElementById('editForm').innerHTML = ""
+      })
+
+    })
+    
+  }
+  const deleteButton = document.querySelectorAll(".delete")
+  for (const button of deleteButton) {
+      button.addEventListener('click', () => {
+        const movie = button.closest('td').id
+        const movieIndex = movies.findIndex(find => find.title == movie)
+        movies = movies.toSpliced(movieIndex, 1)
+        
+        buildTable(movies)
+        
+        
+      })
+    }
 }
+
+
 
 buildTable(movies);
