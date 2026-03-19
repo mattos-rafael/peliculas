@@ -3,33 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <title>Document</title>
 </head>
 <body>
   <main>
+    <header>
+      <h1>Movies app</h1>
+    </header>
     <section class="content">
       <div id="mainForm">
         <div>
-          <h1>Add movie</h1>
-          <form id="addMovie">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name">
-            <br>
-            <label for="year">Year</label>
-            <input type="text" name="year" id="year">
-            <br>
-            <label for="description">Description</label>
-            <textarea name="description" id="description"></textarea>
-            <br>
-            <label for="image">Image URL</label>
-            <input type="text" name="image" id="image">
-            <br>
-            <label for="genre">Genre</label>
-            <select name="genre" id="genre"></select>
-            <br>
-            <button type="submit">Submit</button>
-          </form>
+          <h1 class="content">Add movie</h1>
+          <div class="form">
+            <form id="addMovie">
+              <label class="label" for="name">Name</label>
+              <input type="text" name="name" id="name">
+              <label class="label" for="year">Year</label>
+              <input type="text" name="year" id="year">
+              <label class="label" for="description">Description</label>
+              <textarea name="description" id="description"></textarea>
+              <label class="label" for="image">Image URL</label>
+              <input type="text" name="image" id="image">
+              <label class="label" for="genre">Genre</label>
+              <select name="genre" id="genre"></select>
+              <button class="btn-submit" type="submit">Submit</button>
+            </form>
+          </div>
+          
         </div>
         <img src="./assets/movie.jpg" id="placeholderImg" alt="">
       </div>
@@ -37,9 +41,9 @@
 
     <section class="content">
       <div id="searchMovie">
-        <label for="search">Search</label>
+        <label id="search-label" for="search">Search</label>
         <input type="text" name="search" id="search">
-        <button id="searchButton">Search</button>
+        <button class="btn-search" id="searchButton"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></button>
         
       </div>
       <div" id="filter">

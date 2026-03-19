@@ -1,26 +1,48 @@
 * {
   background-color: black;
+  font-family: 'Rubik';
+}
+
+header {
+  color: white;
+}
+
+header > h1 {
+  margin-left: 50px;
 }
 
 input {
-  width: 30rem;
+  width: 20rem;
+  border-radius: 5px;
   color: white;
 }
 
 textarea {
-  width: 30rem;
+  resize: none;
+  width: 20rem;
   height: 150px;
+  border-radius: 5px;
   color: white;
 }
 
-button {
-  width: 100px;
-  color: black;
-  background-color: rgb(104, 97, 97);
-}
 table, th, td {
   border: 1px solid white;
   border-collapse: collapse;
+  padding: 3px;
+  overflow-x: auto;
+  font-size: x-small;
+}
+
+td {
+  vertical-align: top;
+}
+
+td:nth-of-type(6) {
+  text-align: center;
+}
+
+td:nth-of-type(4) {
+  text-align: center;
 }
 
 select {
@@ -28,24 +50,66 @@ select {
   margin: 1rem;
 }
 
-.images {
-  max-width: 400px;
+.btn-search {
+  color: white;
+  border-style: none;
 }
 
+.btn-submit {
+    width: 100px;
+    color: black;
+    background-color: rgb(104, 97, 97);
+  }
+
+.label {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background-color: rgb(43, 43, 43);
+}
+
+.images {
+  margin: auto;
+  width: 90%;
+  object-fit: contain;
+  
+}
+
+
 .content {
-  margin: 50px;
   color: white;
 }
 
+.form {
+  margin: 15px;
+}
+
+.edit {
+  color: white;
+  border-style: none;
+}
+
+.delete {
+  color: white;
+  border-style: none;
+}
+
+#search-label {
+  margin-top: 5px;
+  margin-right: 3px;
+}
 
 #searchMovie {
   display: flex;
   justify-content: center;
+  margin: 20px;
+  margin-top: 80px;
 }
 
 #tableMovies {
   margin: 50px;
-  width: 90%;
+  width: 100%;
+  table-layout: fixed;
+  
 }
 
 #mainForm {
@@ -56,15 +120,21 @@ select {
 #editMovie {
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  border-radius: 5px;
+  background-color:  rgb(43, 43, 43);
 }
 
 #addMovie {
   display: flex;
   flex-direction: column;
+  padding: 10px;
+  border-radius: 5px;
+  background-color:  rgb(43, 43, 43);
 }
 
 #placeholderImg {
-  width: 40%;
+  display: none;
 }
 
 #filter {
@@ -72,4 +142,46 @@ select {
   align-items: center;
   flex-direction: column;
   
+}
+
+@media (min-width: 600px) {
+
+  table, th, td {
+    padding: 8px;
+    font-size: medium;
+  }
+
+  .form {
+    margin: 0px;
+  }
+
+  #tableMovies {
+    margin: 50px;
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  input {
+    width: 30rem;
+    height: 30px;
+  }
+  textarea {
+     width: 30rem;
+  }
+  .content {
+    margin: 50px;
+  }
+
+  #placeholderImg {
+    display: block;
+    margin: 50px;
+    width: 60%;
+  }
+
+  #tableMovies {
+    margin: 50px;
+    width: 90%;
+  }
+
 }
