@@ -5,70 +5,70 @@ let movies = [
   title: 'The Shining',
   year: '1980',
   description: 'A family isolated in a hotel descends into madness',
-  image: 'https://via.placeholder.com/150?text=TheShining',
+  image: 'https://upload.wikimedia.org/wikipedia/en/1/1d/The_Shining_%281980%29_U.K._release_poster_-_The_tide_of_terror_that_swept_America_IS_HERE.jpg',
   genre: 'terror'
   },
   {
   title: 'Mad Max Fury Road',
   year: '2015',
   description: 'A post apocalyptic chase across the wasteland',
-  image: 'https://via.placeholder.com/150?text=MadMax',
+  image: 'https://m.media-amazon.com/images/M/MV5BZDRkODJhOTgtOTc1OC00NTgzLTk4NjItNDgxZDY4YjlmNDY2XkEyXkFqcGc@._V1_.jpg',
   genre: 'acción'
   },
   {
   title: 'Eternal Sunshine of the Spotless Mind',
   year: '2004',
   description: 'A couple erases each other from their memories',
-  image: 'https://via.placeholder.com/150?text=EternalSunshine',
+  image: 'https://m.media-amazon.com/images/M/MV5BMTY4NzcwODg3Nl5BMl5BanBnXkFtZTcwNTEwOTMyMw@@._V1_.jpg',
   genre: 'romantica'
   },
   {
   title: 'The Grand Budapest Hotel',
   year: '2014',
   description: 'A concierge and lobby boy at a famous hotel',
-  image: 'https://via.placeholder.com/150?text=GrandBudapest',
+  image: 'https://m.media-amazon.com/images/M/MV5BMzM5NjUxOTEyMl5BMl5BanBnXkFtZTgwNjEyMDM0MDE@._V1_FMjpg_UX1000_.jpg',
   genre: 'comedia'
   },
   {
   title: 'Hereditary',
   year: '2018',
   description: 'A family uncovers dark secrets after a death',
-  image: 'https://via.placeholder.com/150?text=Hereditary',
+  image: 'https://upload.wikimedia.org/wikipedia/en/d/d9/Hereditary.png',
   genre: 'terror'
   },
   {
   title: 'John Wick',
   year: '2014',
   description: 'A retired assassin seeks revenge',
-  image: 'https://via.placeholder.com/150?text=JohnWick',
+  image: 'https://upload.wikimedia.org/wikipedia/pt/1/13/John_wick_ver3.jpg',
   genre: 'acción'
   },
   {
   title: 'The Notebook',
   year: '2004',
   description: 'A love story told across decades',
-  image: 'https://via.placeholder.com/150?text=TheNotebook',
+  image: 'https://m.media-amazon.com/images/M/MV5BZjE0ZjgzMzYtMTAxYi00NGMzLThmZDktNzFlMzA2MWRmYWQ0XkEyXkFqcGc@._V1_.jpg',
   genre: 'romantica'
   },
   {
   title: 'Superbad',
   year: '2007',
   description: 'Two friends navigate high school and parties',
-  image: 'https://via.placeholder.com/150?text=Superbad',
+  image: 'https://m.media-amazon.com/images/M/MV5BNjk0MzdlZGEtNTRkOC00ZDRiLWJkYjAtMzUzYTRiNzk1YTViXkEyXkFqcGc@._V1_.jpg',
   genre: 'comedia'
   },
   {
   title: 'The Ring',
   year: '2002',
   description: 'A cursed videotape brings supernatural horror',
-  image: 'https://via.placeholder.com/150?text=TheRing',
+  image: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Theringpostere.jpg/250px-Theringpostere.jpg',
   genre: 'terror'
   },
   {
   title: 'Mission Impossible',
   year: '1996',
   description: 'A secret agent on an impossible mission',
-  image: 'https://via.placeholder.com/150?text=MissionImpossible',
+  image: 'https://upload.wikimedia.org/wikipedia/en/e/e1/MissionImpossiblePoster.jpg',
   genre: 'acción'
   }
 
